@@ -156,11 +156,12 @@ auto main(int argc, char const* argv[]) -> int
 		std::ofstream fo("toto.txt");
 		fo << HashCode2020::Libraries.size() << '\n';
 
-		for (auto &l : HashCode2020::Libraries) {
-			fo << l.books().size() << '\n';
-			for (const auto* b : l.books()) {
+		for (auto i = 0U; i < HashCode2020::Libraries.size(); ++i) {
+			fo << HashCode2020::Libraries[i].index() << ' ' << HashCode2020::Libraries[i].books().size() << '\n';
+			for (const auto* b : HashCode2020::Libraries[i].books()) {
 				fo << b->index() << ' ';
-			} 
+			}
+			fo << '\n';
 		}		
 
 	}
