@@ -10,14 +10,14 @@ SRCS 	=	main.cpp
 
 OBJS     =   $(SRCS:.cpp=.o)
 
-CXXFLAGS  +=      -O3 -W -Wall -Wextra -pedantic -std=c++17
+CXXFLAGS  +=     -O3  -Wall -Wextra -pedantic -std=c++17
 
 NAME 	=	a.out
 
 CXX		= 	g++
 
 $(NAME): 	$(OBJS)
-		$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
+		$(CXX) $(OBJS) $(CFLAGS) -o $(NAME)
 
 all:		$(NAME)
 
