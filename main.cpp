@@ -10,9 +10,8 @@
 
 using namespace std;
 
-void parser();
+void parser() {
 
-int main() {
 	int nb_books;
 	int nb_libraries;
 
@@ -47,3 +46,17 @@ int main() {
 		}
 	}
 }
+
+int main() {
+	parser();
+	ofstream fo("toto.txt");
+	fo << libraries.size() << '\n';
+
+	for (auto l : libraries) {
+		fo << l.books.size() << '\n';
+		for (auto b : l.books) {
+			fo << b->index() << ' ';
+		} 
+	}
+}
+
