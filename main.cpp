@@ -152,8 +152,10 @@ auto main(int argc, char const* argv[]) -> int
 		auto Libraries = HashCode2020::Libraries;
 		std::cout << finished << std::endl;
 
-		// Todo: what if () 
-		std::ofstream fo("toto.txt");
+		// Todo: what if ()
+		std::string name = argv[1];
+		name += "toto.txt";
+		std::ofstream fo(name);
 		fo << HashCode2020::Libraries.size() << '\n';
 
 		for (auto i = 0U; i < HashCode2020::Libraries.size(); ++i) {
